@@ -4,6 +4,12 @@ Author: ROC Horizon College
 Description: Dit thema laat op de homepage een overzicht van posts zien met een bovenaan een lijst van links naar de beschikbare pagina's
 Version: 2.0
 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
  body{
   background-image: url("https://wallpapers.com/images/hd/lake-view-with-vast-mountain-range-h6m3joz1k0isqdiz.jpg");
   background-repeat: no-repeat;
@@ -17,10 +23,12 @@ header {
   background-color: #3586ff;
   padding: 10px;
   color: #fff;
+  opacity: 0.8;
 }
 
 h1 {
   margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav ul {
@@ -35,9 +43,11 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: white;
+  font-size: 20px;
   text-decoration: none;
   padding: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 /* content */
 .entry-content {
@@ -45,12 +55,9 @@ nav ul li a {
   border: 1px solid lightgray;
   color: black;
   padding: 10px;
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.5);
   margin-bottom: 20px;
-  /* display: flex;
-  align-items: flex-start;
-  justify-content: center; */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box-shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 .entry-content p {
@@ -60,6 +67,7 @@ nav ul li a {
 .entry-content a {
   color: darkblue;
   text-decoration: underline;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .entry-content img {
@@ -69,13 +77,6 @@ nav ul li a {
   margin-bottom: 10px;
   margin-left: 10px;
 }
-
-/* .entry-content blockquote {
-  margin: 0;
-  padding: 10px;
-  background-color: #f5f5f5;
-  border-left: 4px solid #ddd;
-} */
 
 .entry-content ul,
 .entry-content ol {
@@ -88,35 +89,32 @@ nav ul li a {
   margin-bottom: 5px;
 }
 
-/* .entry-content pre {
-  background-color: #f5f5f5;
-  padding: 10px;
-  overflow-x: auto;
-  font-family: Consolas, Monaco, monospace;
-  font-size: 14px;
+a {
+  display: flex;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.entry-content code {
-  font-family: Consolas, Monaco, monospace;
-  font-size: 14px;
-  background-color: #f5f5f5;
-  padding: 2px 4px;
-} */
-
 .post-23 {
-  /* display:flex; */
-  background-color: #fff;
+ 
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 3px;
-  box-shadow: 0 2px 4px gray;
+  
 }
 
 /* footer */
 .footer {
   margin-top: 500px;
   position: relative;
-  width: 95%;
+  width: 100%;
   background: #3586ff;
   min-height: 100px;
   padding: 20px 50px;
@@ -125,7 +123,12 @@ nav ul li a {
   align-items: center;
   flex-direction: column;
 }
-
+li::marker{
+  text-decoration: none;
+}
+li{
+  text-decoration: none;
+}
 .social-icon,
 .menu {
   position: relative;
